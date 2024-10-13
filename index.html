@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="style.css">
 
 	<title>Frontend Mentor | Huddle landing page with curved sections</title>
 
@@ -42,59 +42,74 @@
 			</div>
 		</section>
 		<section class="grow">
-			<h2 class="grow__title">Grow Together</h2>
-			<p class="grow__p">
-				Generate meaningful discussions with your audience and build a strong, loyal community.
-				Think of the insightful conversations you miss out on with a feedback form.
-			</p>
+			<div class="grow__text-container">
+				<h2 class="grow__title">Grow Together</h2>
+				<p class="grow__p">
+					Generate meaningful discussions with your audience and build a strong, loyal community.
+					Think of the insightful conversations you miss out on with a feedback form.
+				</p>
+			</div>
+			<div class="grow_image-container">
+				<img src="" alt="" class="metrics__image">
+			</div>
 		</section>
 		<section class="flowing">
-			<h2 class="flowing__title">Flowing Conversations</h2>
-			<p class="flowing__paragraph">
-				You wouldn't paginate a conversation in real life, so why do it online? Our threads have
-				just-in-time loading for a more natural flow.
-			</p>
+			<div class="flowing_image-container">
+				<img src="" alt="" class="metrics__image">
+			</div>
+			<div class="flowing__text_container">
+				<h2 class="flowing__title">Flowing Conversations</h2>
+				<p class="flowing__paragraph">
+					You wouldn't paginate a conversation in real life, so why do it online? Our threads have
+					just-in-time loading for a more natural flow.
+				</p>
+			</div>
 		</section>
 		<section class="users">
-			<h2 class="users__title">Your Users</h2>
-			<p class="users__p">
-				It takes no time at all to integrate Huddle with your app's authentication solution. This means,
-				once signed in to your app, your users can start chatting immediately.
-			</p>
+			<div class="users__text-container">
+				<h2 class="users__title">Your Users</h2>
+				<p class="users__p">
+					It takes no time at all to integrate Huddle with your app's authentication solution. This means,
+					once signed in to your app, your users can start chatting immediately.
+				</p>
+			</div>
+			<div class="metrics_image-container">
+				<img src="" alt="" class="metrics__image">
+			</div>
 		</section>
 		<section class="ready">
 			<h2 class="ready__title">Ready To Build Your Community?</h2>
 			<button type="button">Get Started For Free</button>
 		</section>
-		<footer>
-			<div class="contact">
-				<img src="" alt="" class="footer__logo">
-				<p class="contact__p">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
-					vestibulum a, ultrices quis sem.
-				</p>
-				<p class="contact__phone">
-					Phone: +1-543-123-4567
-				</p>
-				<p class="contact__mail">
-					example@huddle.com
-				</p>
-			</div>
-			<div class="newsletter">
-				<h3 class="footer__newsletter--title">Newsletter</h3>
-				<p class="newsletter__p">
-					To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never
-					send you spam or pass on your email address
-				</p>
-				<button class="footer__newsletter-suscribe">Subscribe</button>
-			</div>
-		</footer=>
 	</main>
 	<footer>
+		<div class="footer__contact">
+			<img src="" alt="" class="footer__logo">
+			<p class="contact__p">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
+				vestibulum a, ultrices quis sem.
+			</p>
+			<p class="contact__phone">
+				Phone: +1-543-123-4567
+			</p>
+			<p class="contact__mail">
+				example@huddle.com
+			</p>
+		</div>
+		<div class="footer__newsletter">
+			<h3 class="newsletter__title">Newsletter</h3>
+			<p class="newsletter__p">
+				To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never
+				send you spam or pass on your email address
+			</p>
+			<button class="footer__newsletter-suscribe">Subscribe</button>
+		</div>
+	</footer=>
+	<div class="footer__frontendmentor">
 		<p class="attribution">
 			Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 			Coded by <a href="#">Fred Urbina</a>.
 		</p>
-	</footer>
+	</div>
 </body>
 </html>

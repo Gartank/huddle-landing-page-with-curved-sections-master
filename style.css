@@ -15,51 +15,137 @@
     /* neutral */
     --very-dark-cyan: hsl(192, 100%, 9%);
     --very-pale-blue: hsl(207, 100%, 98%);
+    color: var(--very-dark-cyan)
 }
-
 body, html{
     width: 100vw;
     min-height: 100vh;
+    background-color: var(--very-pale-blue)
 }
 
+button{
+    font-size: 20px;
+}
+
+.filled_btn{
+    width: 25vw;
+    height: 3em;
+    border: none;
+    border-radius: 30px;
+
+    font-weight: 550;
+
+    color: white;
+    background: var(--pink);
+}
+
+/* Header styles */
 header {
     width: 100%;
     height: 15vh;
-
+    
 }
 nav{
     width: 100%;
     height: 100%;
     padding: 40px;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .header__logo{
     width: 15em;
-    height: 2.5em;
+    height: auto;
 }
 
 .header__btn{
-    width: 12em;
-    height: 3.5em;
+    width: 10vw;
+    height: 2.5em;
     border: 3px solid;
     border-radius: 30px;
-
+    
     display: block;
-
-    color: var(--pink);
+    
+    font-weight: 600;
+    color: var(--light-pink);
 }
 
+/* main styles */
 main {
     width: 100%;
     min-height: 100vh;
+    padding-inline: 10vw;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: stretch;
 }
+section{
+    width: 100%;
+    min-height: 15vh;
+    
+    display: flex;
+}
+
+/* start section */
+.section__start{
+    padding-block: 100px;
+    
+    flex-flow: column;
+    gap: 2.5em;
+    align-items: center;
+    justify-content: space-between;
+}
+.start__text-container{
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    flex-flow: column;
+    justify-items: space-around;
+    align-items: center;
+    gap: 1.5em;
+}
+.start__title, .start__p{
+    text-align: center;
+}
+.start__title{
+    font-size: 2em;
+}
+.start__p{
+    width: 60%;
+}
+.start__image{
+    width: 85%;
+    max-width: 900px;
+    height: auto;
+    margin-block-start: 50px; 
+}
+.start__metrics{
+    width: 100%;
+    padding-block: 100px 200px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+.metrics__category{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+.category__metric{
+    font-size: 4em;
+    font-weight: 600;
+}
+.category__text{
+    display: inline-block;
+    width: 100%;
+    
+    text-align: center
+}
+
+
 
 footer{
     width: 100%;

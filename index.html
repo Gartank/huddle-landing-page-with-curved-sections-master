@@ -7,12 +7,6 @@
 	<link rel="stylesheet" href="style.css">
 
 	<title>Frontend Mentor | Huddle landing page with curved sections</title>
-
-<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<style>
-	.attribution { font-size: 11px; text-align: center; }
-	.attribution a { color: hsl(228, 45%, 44%); }
-	</style>
 </head>
 <body>
 	<header>
@@ -23,22 +17,34 @@
 	</header>
 	<main>
 		<section class="section__start">
-			<h2 class="start__title">Build The Community Your Fans Will Love</h2>
-			<p class="start__p">
-				Huddle re-imagines the way we build communities. You have a voice, but so does
-				your audience. Create connections with your users as you engage in genuine discussion.
-			</p>
-			<button class="start__button" type="button">Get Started For Free</button>
-			<img src="" alt="" class="start__image">
-		</section>
-		<section class="section__metrics">
-			<div class="metrics__comunities">
-				1.4k+
-				Communities Formed
+			<div class="start__text-container">
+				<h2 class="start__title">Build The Community Your Fans Will Love</h2>
+				<p class="start__p">
+					Huddle re-imagines the way we build communities. You have a voice, but so does
+					your audience. Create connections with your users as you engage in genuine discussion.
+				</p>
 			</div>
-			<div class="metrics__messages">
-				2.7m+
-				Messages Sent
+			<button class="filled_btn start__button" type="button">Get Started For Free</button>
+			<img src="./images/screen-mockups.svg" alt="" class="start__image">
+			<div class="start__metrics">
+				<div class="metrics__category metrics__comunities">
+					<img src="./images/icon-communities.svg" alt="">
+					<span class="category__metric comunities__metric">
+						1.4k+
+					</span>
+					<span class="category__text comunities__text">
+						Communities Formed
+					</span>
+				</div>
+				<div class="metrics__category metrics__messages">
+					<img src="./images/icon-messages.svg" alt="">
+					<span class="category__metric messages__metric">
+						2.7m+
+					</span>
+					<span class="category__text message__text">
+						Messages Sent
+					</span>
+				</div>
 			</div>
 		</section>
 		<section class="section__grow">
@@ -50,7 +56,7 @@
 				</p>
 			</div>
 			<div class="grow_image-container">
-				<img src="" alt="" class="metrics__image">
+				<img src="./images/illustration-grow-together.svg" alt="" class="metrics__image">
 			</div>
 		</section>
 		<section class="section__flowing">
@@ -73,13 +79,13 @@
 					once signed in to your app, your users can start chatting immediately.
 				</p>
 			</div>
-			<div class="metrics_image-container">
+			<div class="users__image-container">
 				<img src="" alt="" class="metrics__image">
 			</div>
 		</section>
 		<section class="section__ready">
 			<h2 class="ready__title">Ready To Build Your Community?</h2>
-			<button type="button">Get Started For Free</button>
+			<button class="filled_btn ready__button" type="button">Get Started For Free</button>
 		</section>
 	</main>
 	<footer>

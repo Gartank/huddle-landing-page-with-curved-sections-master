@@ -9,6 +9,8 @@
 	<title>Frontend Mentor | Huddle landing page with curved sections</title>
 </head>
 <body>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	<header>
 		<nav class="header__nav">
 			<img src="./images/logo.svg" alt="Huddle logo" class="header__logo">
@@ -82,29 +84,42 @@
 			<button class="filled_btn ready__button" type="button">Get Started For Free</button>
 		</section>
 	</main>
+	<div class="footer__bg-flow"></div>
 	<footer>
-		<div class="footer__contact">
-			<img src="" alt="" class="footer__logo">
-			<p class="text_body contact__p">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
-				vestibulum a, ultrices quis sem.
+		<div class="footer__section footer__contact">
+			<div class="contact__container">
+				<img src="./images/logo.svg" alt="" class="footer__logo">
+				<p class="text_body contact__p">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
+					vestibulum a, ultrices quis sem.
+				</p>
+				<p class="contact contact__phone">
+					<span class="phone__icon"><img src="./images/icon-phone.svg" alt=""></span> Phone: +1-543-123-4567
+				</p>
+				<p class="contact contact__mail">
+					<span class="email__icon"><img src="./images/icon-email.svg" alt=""></span> example@huddle.com
+				</p>
+			</div>
+
+			<p class="contact__social-media">
+				<ion-icon class="social-media__icon" name="logo-facebook" size="large"></ion-icon>
+				<ion-icon class="social-media__icon" name="logo-instagram" size="large"></ion-icon>
+				<ion-icon class="social-media__icon" name="logo-twitter" size="large"></ion-icon>
 			</p>
-			<p class="contact__phone">
-				Phone: +1-543-123-4567
-			</p>
-			<p class="contact__mail">
-				example@huddle.com
-			</p>
+			</div>
 		</div>
-		<div class="footer__newsletter">
+		<div class="footer__section footer__newsletter">
 			<h3 class="text_title newsletter__title">Newsletter</h3>
 			<p class="text_body newsletter__p">
 				To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never
 				send you spam or pass on your email address
 			</p>
-			<button class="footer__newsletter-suscribe">Subscribe</button>
+			<form  name="newsletter_name" action="" method="get">
+				<input class="newsletter__input" placeholder="E-mail" type="email" name="newsletter_name" id="">
+				<button class="newsletter__suscribe">Subscribe</button>
+			</form>
 		</div>
-		<div class="footer__frontendmentor">
+		<div class="footer__section footer__frontendmentor">
 			<p class="attribution">
 				Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 				Coded by <a href="#">Fred Urbina</a>.

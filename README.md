@@ -33,8 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repo](https://github.com/Gartank/huddle-landing-page-with-curved-sections-master)
-- Live Site URL: [live site](https://your-live-site-url.com)
-
+- Live Site URL: [live site](https://gartank.github.io/huddle-landing-page-with-curved-sections-master/)
 ### Built with
 
 - Semantic HTML5 markup

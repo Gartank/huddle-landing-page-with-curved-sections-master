@@ -1,8 +1,10 @@
 @import url(https://fonts.google.com/specimen/Poppins);
 @import url(https://fonts.google.com/specimen/Open+Sans);
+
 *, *::after, *::before{
     margin: 0;
     padding: 0;
+    min-height: fit-content;
     box-sizing: border-box;
     overflow-x: hidden;
 
@@ -24,30 +26,26 @@ body, html{
 body{
     color: var(--very-dark-cyan);
 }
-
+input, input:focus{
+    border: 0px transparent;
+}
 button{
-    font-size: 20px;
+    min-height: fit-content;
+    padding-inline: 20px;
+    padding-block: 7px;
+    box-sizing: content-box;
+    font-size: 1.7em;
     background-color: white;
 }
 button:hover{
     cursor: pointer;
 }
-
-.text_body{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1.4em;
-}
-
-.text_title{
-    font-weight: 700;
-    font-size: 2.5em;
-}
 .filled_btn{
-    width: 25vw;
-    height: 3em;
+    width: fit-content;
+    padding-inline: 2em;
+    height: 2em;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
     
     font-weight: 550;
     
@@ -56,6 +54,21 @@ button:hover{
 }
 .filled_btn:hover{
     background-color: var(--light-pink);
+}
+
+.text_body{
+    max-width: 35vw;
+    min-width: 300px;
+    min-height: fit-content;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    overflow-y: visible;
+}
+.text_title{
+    font-weight: 700;
+    font-size: 2.5em;
 }
 
 /* Header styles */
@@ -67,27 +80,26 @@ header {
 nav{
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 5vh;
     
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .header__logo{
-    width: 15em;
+    max-width: 30vw;
     height: auto;
 }
-
 .header__btn{
-    width: 10vw;
-    height: 2.5em;
+    max-width: 30vw;
+    max-height: 30vh;
     border: 2px solid;
     border-radius: 30px;
-    
     display: block;
     
     font-weight: 400;
     color: var(--light-pink);
+    font-size: 1.1em;
 }
 
 /* main styles */
@@ -113,22 +125,24 @@ section{
 }
 .section__bg-bot, .section__bg-top{
     width: 100%;
-    height: 150px;
+    min-height: 150px;
     
     background: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .section__text-container{
     width: 40vw;
 
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 10px;
 }
 .section__image{
     width: 40vw;
 }
-
+.section__bg-bot, .section__bg-top{
+    background-size: cover;
+}
 #section__bg-bot1{
     height: 139px;
     background-image: url(images/bg-section-bottom-desktop-1.svg);
@@ -145,7 +159,6 @@ section{
     height: 139px;
     background-image: url(images/bg-section-bottom-desktop-2.svg);
 }
-
 
 /* start section */
 .section__start{
@@ -174,40 +187,46 @@ section{
     font-size: 3em;
 }
 .start__p{
-    width: 40%;
+    max-width: 550px 
 }
 .start__image{
-    width: 1000px;
+    min-width: 370px;
     max-width: 95%;
     height: auto;
     margin-block-start: 50px; 
 }
 .start__metrics{
-    width: 100%;
-    padding-block: 100px;
+    width: fit-content;
+    padding: 100px 90px;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    column-gap: 20vw;
 }
 .metrics__category{
+    width: fit-content;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
 }
 .category__metric{
-    font-size: 6.5em;
+    width: 100%;
+    font-size: 5em;
     font-weight: 600;
+}
+.metrics__image{
+    width: 2em;
 }
 .category__text{
     display: inline-block;
-    width: 100%;
+    min-width: 100%;
     
-    text-align: center
+    text-align: center;
 }
 
 /* section grow */
 .grow__image{
-    max-width: 50%;
+    max-width: 100%;
 }
 .grow__text-container{
     display: flex;
@@ -231,29 +250,27 @@ section{
     background-color: inherit;
 }
 
+/*footer*/
 footer{
     width: 100vw;
-    height: 50vh;
+    min-height: max-content;
     padding-block-start: 5vh;
-    overflow-y: hidden;
+    padding-inline: 3vh;
+    overflow-y: visible;
 
     display: flex;
-    flex-flow: wrap;
+    flex-flow: wrap-reverse;
     justify-content: space-around;
+    gap: 20px;
     
     color: var(--very-pale-blue);
     background-color: var(--very-dark-cyan);
 }
-.footer__bg-flow{
+.footer__bg-flow {
     width: 100vw;
-    min-height: 200px;
-    /* 
-    position: relative;
-    top: calc(442vh + 1px);
-    left: auto;
-    z-index: 1; */
-
-    color:var(--very-pale-blue);
+    height: 22vh;
+    min-height: 158px;
+    color: var(--very-pale-blue);
     background: url("./images/bg-footer-top-desktop.svg") no-repeat;
     background-size: cover;
 }
@@ -262,20 +279,19 @@ footer{
     filter: grayscale(100) brightness(100);
 }
 .footer__section{
-    width: 30vw;
+    min-width: 20em;
+    max-width: 25em;
 
     display: flex;
     flex-flow: column;
     gap: 20px;
 }
-
 .footer__newsletter, .footer__contact{
     height: 30vh;
 }
-
 .footer__contact{
-    width: 25vw;
     justify-content: space-between;
+    gap: 20px;
 }
 .contact__container{
     width: 100%;
@@ -284,6 +300,7 @@ footer{
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    gap: 20px;
 }
 .contact__social-media{
     display: flex;
@@ -301,10 +318,13 @@ footer{
 }
 
 .footer__newsletter{
-    width: 30vw;
-    height: 20vh;
-    gap: 10px;
-    justify-content: space-between;
+    min-height: fit-content;
+    gap: 20px;
+}
+.newsletter__p, .contact__p{
+    width: 100%; 
+    /* height: fit-content; */
+    font-size: 100%;
 }
 .footer__newsletter > form{
     display: flex;
@@ -315,13 +335,14 @@ footer{
     height: 45px;
     padding: 10px 5px;
     border-radius: 10px;
-    border: none;
+    border: 2px solid  white;
 }
 .newsletter__input::placeholder{
     padding-inline-start: 20px;
 }
-.newsletter__input::selection{
-    border: none;
+.newsletter__input:focus{
+    outline: none;
+    border: 2px solid var(--light-red);
 }
 .newsletter__suscribe{
     width: 30%;
@@ -337,8 +358,113 @@ footer{
 .footer__frontendmentor{
     width: 100vw;
     height: 5vh;
+    padding-block: 10px;
+    border: none;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    color: var(--very-pale-blue);
+    background-color: var(--very-dark-cyan);
+}
+
+/*Mobile Rules*/
+@media (width <= 775px) {
+
+    body{
+        font-size: 10px;
+    }
+    .text_title{
+        font-size: 2em;
+        text-align: center;
+    }
+    .text_body{
+        max-width: 300px;
+        margin-inline: auto;
+
+        text-align: center;
+        font-size: 14px;
+    }
+    .header__btn{
+        width: 5em;
+    }
+    
+    .filled_btn{
+        width: fit-content;
+    }
+    
+    section{
+        width: 100%;
+        flex-flow: column-reverse;
+        padding: 0;
+        padding-inline: 40px;
+        
+        gap: 30px;
+    }
+    .section__start{
+        padding-block: 10vh;
+    }
+    .section__text-container{
+        width: 100%;
+    }
+    .start__metrics{
+        flex-flow: column wrap;
+        gap: 10vh;
+        justify-items: center;
+        padding-inline: 130px;
+    }
+    .metrics__category{
+        width: fit-content;
+    }
+    .section__flowing{
+        flex-flow: column;
+    }
+    .section__bg-bot, .section__bg-top{
+        min-height: 50px;
+    }
+    #section__bg-bot1{
+        max-height: 135px;
+        background-image: url(images/bg-section-bottom-mobile-1.svg);
+    }
+    #section__bg-top1{
+        max-height: 165px;
+        background-image: url(images/bg-section-top-mobile-1.svg);
+    }   
+    #section__bg-top2{
+        max-height: 103px;
+        background-image: url(images/bg-section-top-mobile-2.svg);
+    }
+    #section__bg-bot2{
+        max-height: 139px;
+        background-image: url(images/bg-section-bottom-mobile-2.svg);
+    }
+
+    .footer__bg-flow{
+        max-height: 150px;
+        min-height: 70px;
+        background-image: url(images/bg-footer-top-mobile.svg);
+    }
+    footer{
+        height: max-content;
+        padding-block: 30px;
+        flex-wrap: wrap-reverse;
+        gap: 50px;
+    }
+    .footer__section{
+        height: fit-content;
+    }
+    .newsletter__title{
+        text-align: start;
+    }
+    .newsletter__p, .contact__p{
+        min-width: 10em;
+        min-height: 5em;
+        /* font-size: 1em; */
+        text-align: start;
+    }
+    .footer__newsletter > form{
+        flex-flow: column;
+    }
+
+    .newsletter__input{
+        width: 100%;
+    }
 }
